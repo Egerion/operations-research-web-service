@@ -12,6 +12,11 @@ namespace ORMonll.Repository
     {
         [InjectService] private ApplicationDbContext applicationDbContext { get; init; }
 
+        public User findById(long id)
+        {
+            return applicationDbContext.ORM_USER.FirstOrDefault(u => u.Id == id);
+        }
+
         public User findByEmailAndPassword(long id)
         {
             return applicationDbContext.ORM_USER.FirstOrDefault(u => u.Id == id);
@@ -24,7 +29,7 @@ namespace ORMonll.Repository
 
         public void deleteById(long id)
         {
-            var user = applicationDbContext.ORM_USER.FirstOrDefault(u => u.Id == id);
+            var user = findById(id);
             if (user == null)
             {
                 return;
