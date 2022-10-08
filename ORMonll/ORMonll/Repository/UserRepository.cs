@@ -1,13 +1,12 @@
 using System.Collections.Generic;
 using System.Linq;
-using Microsoft.Extensions.DependencyInjection;
 using ORMonll.Config;
 using ORMonll.Entity;
 using Quickwire.Attributes;
 
 namespace ORMonll.Repository
 {
-    [RegisterService(ServiceLifetime.Transient)]
+    [RegisterService]
     public class UserRepository : IBaseRepository<User>
     {
         [InjectService] private ApplicationDbContext applicationDbContext { get; init; }
