@@ -4,7 +4,7 @@ using Quickwire.Attributes;
 
 namespace ORMonll.Service
 {
-    [RegisterService(ServiceLifetime.Transient)]
+    [RegisterService]
     public class UserService
     {
         [InjectService] private UserRepository userRepository { get; init; }

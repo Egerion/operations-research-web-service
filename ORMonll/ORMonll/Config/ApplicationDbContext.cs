@@ -5,7 +5,7 @@ using Quickwire.Attributes;
 
 namespace ORMonll.Config
 {
-   [RegisterService(ServiceLifetime.Transient)]
+   [RegisterService]
     public class ApplicationDbContext : DbContext
     {
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
