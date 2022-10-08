@@ -8,10 +8,10 @@ namespace ORMonll.Controllers;
 [RegisterService]
 public class UserController : Controller
 {
-    [InjectService] private UserService userService{ get; init; }
+    [InjectService] private UserService userService { get; init; }
 
     [HttpPost]
-    public IActionResult createUser([FromBody]UserDto userDto)
+    public IActionResult createUser([FromBody] UserDto userDto)
     {
         return Ok();
     }

@@ -10,6 +10,7 @@ namespace ORMonll.Config
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
         {
         }
+
         public DbSet<User> ORM_USER { get; set; }
     }
 }

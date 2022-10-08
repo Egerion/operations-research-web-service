@@ -1,11 +1,9 @@
-using System.Collections.Generic;
-
 namespace ORMonll.Repository
 {
     public interface IBaseRepository<T>
     {
         T findById(long id);
-        
+
         T findByEmailAndPassword(long id);
 
         List<T> findFirstNumberOf(int amount);

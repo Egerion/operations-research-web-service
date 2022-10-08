@@ -1,4 +1,3 @@
-using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using ORMonll.Enum;
@@ -8,36 +7,26 @@ namespace ORMonll.Entity
     [Table("OR_USER")]
     public class User
     {
-        [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        [Key] [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         private long id;
-        
-        [Column(name:"NAME")]
-        private string name;
-        
-        [Column(name:"SURNAME")]
-        private string surname;
-        
-        [Column(name:"DISPLAY_NAME")]
-        private string displayName;
-        
-        [Column(name:"E_MAIL")]
-        private string email;
-        
-        [Column(name:"PASSWORD")]
-        private string password;
-        
-        [Column(name:"AGE")]
-        private int age;
-        
-        [Column(name:"GENDER")]
-        private Gender gender;
-        
-        [Column(name:"INS_DATE")]
-        private DateTime insDate;
-        
-        [Column(name:"IS_REGISTERED")]
-        private Boolean isRegistered;
+
+        [Column(name: "NAME")] private string name;
+
+        [Column(name: "SURNAME")] private string surname;
+
+        [Column(name: "DISPLAY_NAME")] private string displayName;
+
+        [Column(name: "E_MAIL")] private string email;
+
+        [Column(name: "PASSWORD")] private string password;
+
+        [Column(name: "AGE")] private int age;
+
+        [Column(name: "GENDER")] private Gender gender;
+
+        [Column(name: "INS_DATE")] private DateTime insDate;
+
+        [Column(name: "IS_REGISTERED")] private Boolean isRegistered;
 
         public long Id
         {

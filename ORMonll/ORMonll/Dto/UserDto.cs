@@ -4,7 +4,7 @@ namespace ORMonll.Dto;
 
 public class UserDto
 {
-    public long id { get; set; }
+    public long Id { get; set; }
     public string name{ get; set; }
     public string surname{ get; set; }
     public string displayName{ get; set; }

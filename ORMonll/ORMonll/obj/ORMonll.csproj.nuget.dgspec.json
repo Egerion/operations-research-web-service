@@ -1,25 +1,31 @@
 {
   "format": 1,
   "restore": {
-    "/Users/eren/Documents/GitHub/operations-research-web-service/ORMonll/ORMonll/ORMonll.csproj": {}
+    "C:\\Users\\Ege\\Documents\\GitHub\\operations-research-web-service\\ORMonll\\ORMonll\\ORMonll.csproj": {}
   },
   "projects": {
-    "/Users/eren/Documents/GitHub/operations-research-web-service/ORMonll/ORMonll/ORMonll.csproj": {
+    "C:\\Users\\Ege\\Documents\\GitHub\\operations-research-web-service\\ORMonll\\ORMonll\\ORMonll.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/eren/Documents/GitHub/operations-research-web-service/ORMonll/ORMonll/ORMonll.csproj",
+        "projectUniqueName": "C:\\Users\\Ege\\Documents\\GitHub\\operations-research-web-service\\ORMonll\\ORMonll\\ORMonll.csproj",
         "projectName": "ORMonll",
-        "projectPath": "/Users/eren/Documents/GitHub/operations-research-web-service/ORMonll/ORMonll/ORMonll.csproj",
-        "packagesPath": "/Users/eren/.nuget/packages/",
-        "outputPath": "/Users/eren/Documents/GitHub/operations-research-web-service/ORMonll/ORMonll/obj/",
+        "projectPath": "C:\\Users\\Ege\\Documents\\GitHub\\operations-research-web-service\\ORMonll\\ORMonll\\ORMonll.csproj",
+        "packagesPath": "C:\\Users\\Ege\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Ege\\Documents\\GitHub\\operations-research-web-service\\ORMonll\\ORMonll\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "/Users/eren/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\Ege\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -84,7 +90,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.401/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }
