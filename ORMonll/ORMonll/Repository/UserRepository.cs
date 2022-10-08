@@ -1,5 +1,3 @@
-using System.Collections.Generic;
-using System.Linq;
 using ORMonll.Config;
 using ORMonll.Entity;
 using Quickwire.Attributes;
@@ -7,41 +5,48 @@ using Quickwire.Attributes;
 namespace ORMonll.Repository
 {
     [RegisterService]
-    public class UserRepository : IBaseRepository<User>
+    public class UserRepository
     {
-        [InjectService] private ApplicationDbContext applicationDbContext { get; init; }
+        [InjectService] private ApplicationDbContext _applicationDbContext { get; init; }
 
-        public User findById(long id)
+        public User findById(long Id)
         {
-            return applicationDbContext.ORM_USER.FirstOrDefault(u => u.Id == id);
+            return _applicationDbContext.ORM_USER.FirstOrDefault(u => u.Id == Id);
         }
 
-        public User findByEmailAndPassword(long id)
+        public User findByEmailAndPassword(string email, string password)
         {
-            return applicationDbContext.ORM_USER.FirstOrDefault(u => u.Id == id);
+            return _applicationDbContext.ORM_USER.FirstOrDefault(u => u.Email == email && u.Password == password);
         }
 
-        public List<User> findFirstNumberOf(int amount)
+        public void deleteById(long Id)
         {
-            return applicationDbContext.ORM_USER.AsEnumerable().Take(amount).ToList();
-        }
-
-        public void deleteById(long id)
-        {
-            var user = findById(id);
+            var user = findById(Id);
             if (user == null)
             {
                 return;
             }
 
-            applicationDbContext.ORM_USER.Remove(user);
-            applicationDbContext.SaveChanges();
+            delete(user);
+        }
+
+        public void delete(User user)
+        {
+            _applicationDbContext.ORM_USER.Remove(user);
+            _applicationDbContext.SaveChanges();
         }
 
         public void update(User user)
         {
-            applicationDbContext.ORM_USER.Update(user);
-            applicationDbContext.SaveChanges();
+            _applicationDbContext.ORM_USER.Update(user);
+            _applicationDbContext.SaveChanges();
+        }
+
+        public User create(User user)
+        {
+            _applicationDbContext.ORM_USER.Add(user);
+            _applicationDbContext.SaveChanges();
+            return user;
         }
     }
 }

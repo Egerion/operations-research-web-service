@@ -13,19 +13,19 @@ namespace ORMonll.Entity
         private long id;
         
         [Column(name:"NAME")]
-        private String name;
+        private string name;
         
         [Column(name:"SURNAME")]
-        private String surname;
+        private string surname;
         
         [Column(name:"DISPLAY_NAME")]
-        private String displayName;
+        private string displayName;
         
         [Column(name:"E_MAIL")]
-        private String email;
+        private string email;
         
         [Column(name:"PASSWORD")]
-        private String password;
+        private string password;
         
         [Column(name:"AGE")]
         private int age;
